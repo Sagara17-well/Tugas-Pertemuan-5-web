@@ -11,6 +11,3 @@
 ### Screenshot 3
 ![Portfolio 3](screenshot/porto3.jpg)
 
-## 2. Dokumentasi Proses Pengerjaan
-
-![Proses Coding](fotongoding.webp)
