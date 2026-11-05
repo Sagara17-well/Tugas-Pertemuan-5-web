@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #263445;
+    transition: 0.3s;
+}
+
+header {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #174a7e;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #263445;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #2878bd;
+}
+
+button,
+.button {
+    background: #174a7e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.button:hover {
+    background: #2878bd;
+}
+
+.hero {
+    min-height: 550px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.intro {
+    color: #2878bd;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #174a7e;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #2878bd;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #174a7e;
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about-content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.skills {
+    background: #eaf0f6;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skill-card {
+    background: white;
+    padding: 22px 35px;
+    border-radius: 8px;
+    min-width: 130px;
+    font-weight: bold;
+    color: #174a7e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    width: 280px;
+    padding: 28px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #174a7e;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+.project-card.selected {
+    border: 2px solid #2878bd;
+}
+
+.contact {
+    background: #eaf0f6;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #174a7e;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 22px;
+}
+
+body.dark-mode {
+    background: #1c2733;
+    color: #f1f4f8;
+}
+
+.dark-mode header,
+.dark-mode .hero,
+.dark-mode .project-card,
+.dark-mode .skill-card {
+    background: #263445;
+    color: white;
+}
+
+.dark-mode nav a {
+    color: white;
+}
+
+.dark-mode .skills,
+.dark-mode .contact {
+    background: #202f40;
+}
+
+.dark-mode .section-title h2,
+.dark-mode .hero h1,
+.dark-mode .project-card h3 {
+    color: #8fc4ff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+}
